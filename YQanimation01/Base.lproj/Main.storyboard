@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivX-7t-D3s">
+                                <rect key="frame" x="89" y="192" width="143" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIt-pT-30F">
+                                <rect key="frame" x="134" y="251" width="47" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEP-7k-M2p">
+                                <rect key="frame" x="89" y="113" width="143" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GIt-pT-30F" firstAttribute="top" secondItem="ivX-7t-D3s" secondAttribute="bottom" constant="29" id="5mj-3V-EFe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEP-7k-M2p" secondAttribute="trailing" constant="100" id="CaA-7w-tVp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GIt-pT-30F" secondAttribute="trailing" constant="115" id="Dpr-zw-p6K"/>
+                            <constraint firstItem="eEP-7k-M2p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="E4G-Yk-8o5"/>
+                            <constraint firstItem="eEP-7k-M2p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="bGl-b1-03A"/>
+                            <constraint firstItem="ivX-7t-D3s" firstAttribute="top" secondItem="eEP-7k-M2p" secondAttribute="bottom" constant="45" id="cZ9-13-G9A"/>
+                            <constraint firstItem="ivX-7t-D3s" firstAttribute="centerX" secondItem="eEP-7k-M2p" secondAttribute="centerX" id="m1s-GM-VZ9"/>
+                            <constraint firstItem="ivX-7t-D3s" firstAttribute="width" secondItem="eEP-7k-M2p" secondAttribute="width" id="nTQ-59-HAE"/>
+                            <constraint firstItem="GIt-pT-30F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="115" id="vy8-BK-o1a"/>
+                            <constraint firstItem="ivX-7t-D3s" firstAttribute="height" secondItem="eEP-7k-M2p" secondAttribute="height" id="ycq-2M-lqt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginLabel" destination="GIt-pT-30F" id="3j4-oc-Hcz"/>
+                        <outlet property="userName" destination="eEP-7k-M2p" id="vOf-gw-GgA"/>
+                        <outlet property="userPassword" destination="ivX-7t-D3s" id="hGi-Tj-sMy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="123" y="299"/>
         </scene>
     </scenes>
 </document>
